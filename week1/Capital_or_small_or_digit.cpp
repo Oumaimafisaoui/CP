@@ -7,7 +7,7 @@ int main()
     char c;
 
     cin >> c;
-    if(c >= '0' && c <= '9')
+    if(c >= 'a' && c <= 'z')
     {
         cout << "IS DIGIT" << "\n";
     }
