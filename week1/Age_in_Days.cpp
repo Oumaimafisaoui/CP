@@ -1,29 +1,21 @@
 #include <iostream>
-
+#include <math.h>
 using namespace std;
 
 int main()
 {
-   int a;
-   int years;
-   int months;
-   int days;
+   float years;
+   float months;
+   float days;
+   float a;
 
     cin >> a;
-    years = a / 365;
-    days = a / 80;
+    years = floor(a / 365);
+    months = floor((a - (years * 365)) / 30);
+    days = floor(a - ((years * 365) + (months * 30)));
 
     cout << years << " years" << endl;
-    if (a <= 30)
-    {
-        months = a / 30;
-        cout << months << " months" << endl;
-    }
-    else
-    {
-        months = a / 400;
-        cout << months << " months" << endl;
-    }
+    cout << months << " months" << endl;
     cout << days << " days" << endl;
     return (0);
 }

@@ -4,17 +4,23 @@ using namespace std;
 
 int main()
 {
-    float a;
-    float b;
+    float x;
+    float y;
 
-    cin >> a >> b;
-    if (b >= 0 && a <= 0)
+    cin >> x >> y;
+    if (x == 0 && y == 0)
+        cout << "Origem" << endl;
+    else if (x == 0 && (y > 0 || y < 0))
+        cout <<  "Eixo Y" << endl;
+    else if (y == 0 & ( x > 0 || x < 0))
+        cout << "Eixo X" << endl;
+    else if (y >= 0 && x <= 0)
         cout << "Q2" << endl;
-    else if (b >= 0 && a >= 0)
+    else if (y >= 0 && x >= 0)
         cout << "Q1" << endl;    
-    else if (b <= 0 && a >= 0)
+    else if (y <= 0 && x >= 0)
         cout << "Q4" << endl;
-    else
+    else if (x <= 0 && y <= 0)
         cout << "Q3" << endl;
     return (0);
 }
